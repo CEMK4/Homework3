@@ -16,7 +16,10 @@ namespace Task3
             Console.WriteLine(pattern, 7, IsPrime(7));
             Console.WriteLine(pattern, 37, IsPrime(37));
             Console.WriteLine(pattern, 79, IsPrime(79));
-            Console.WriteLine(pattern, 173, IsPrime(173));            
+            Console.WriteLine(pattern, 173, IsPrime(173));
+            Console.WriteLine(pattern, 9, IsPrime(9));
+            Console.WriteLine(pattern, 169, IsPrime(169));
+            Console.WriteLine(pattern, 529, IsPrime(529));
         }
 
         /// <summary>
@@ -25,7 +28,8 @@ namespace Task3
         static bool IsPrime(int num)
         {
             int i = 2;
-            while (i < Math.Sqrt(num))
+            int sqrt = (int)Math.Sqrt(num);            
+            while (i <= sqrt)
             {
                 if (num % i == 0)
                     return false;
